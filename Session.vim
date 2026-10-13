@@ -4,7 +4,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/workGao/workInOct2026/vimGrammarPython
+cd ~/workGao/workInOct2026/vim_grammar_max
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -14,9 +14,9 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
+badd +1 error_grammar_example.md
 badd +1 install_plugin.sh
 badd +63 grammar_checker.py
-badd +1 error_grammar_example.md
 badd +17 README.md
 badd +112 grammar_checker.vim
 badd +1 ~/.vim/plugin/grammar_checker.vim
@@ -35,7 +35,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 264 - ((47 * winheight(0) + 24) / 49)
+let s:l = 264 - ((19 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
