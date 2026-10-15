@@ -6,6 +6,8 @@ the public [LanguageTool](https://languagetool.org/) HTTP API.
 No Java, no local LanguageTool server, no LSP. Just Vim, Python, `requests`, and
 one HTTPS endpoint.
 
+![example screenshots](./screenshots/vim_grammar_example_1.png)
+
 ## Quick start
 
 ```bash

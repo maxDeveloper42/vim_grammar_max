@@ -18,30 +18,13 @@ badd +1 screenshots/README.md
 badd +1 error_grammar_example.md
 badd +1 install_plugin.sh
 badd +63 grammar_checker.py
-badd +17 README.md
+badd +10 README.md
 badd +112 grammar_checker.vim
 badd +1 ~/.vim/plugin/grammar_checker.vim
 badd +129 README_for_MACHINE_TO_READE.md
 argglobal
 %argdel
 $argadd ~/.vim/plugin/grammar_checker.vim
-edit error_grammar_example.md
-argglobal
-balt README_for_MACHINE_TO_READE.md
-setlocal fdm=expr
-setlocal fde=Foldexpr_markdown(v:lnum)
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 20) / 41)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 05|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
